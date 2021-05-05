@@ -1,0 +1,65 @@
+.footer{
+    padding: 20px 0;
+    background:$colorPrimario;
+    
+    p{
+        color: #fff;
+        text-align: center;
+        margin: 0;
+    }
+
+    &--logos{
+        display: flex;
+        align-items: center;
+        justify-content:center;
+        margin: 20px auto;
+
+        img{
+            width: auto;
+            max-width: 150px;
+            max-height: 50px;
+            margin: 0 20px;
+            filter: brightness(0) invert(1);
+        }
+    }
+
+    &--legales, &--datos{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px 0 0;
+        flex-wrap: wrap;
+
+        a, span{
+            text-transform: uppercase;
+            text-align: center;
+            
+            @include h6;
+            cursor: pointer;
+        }
+
+        span{
+            margin: 0 5px;
+        }
+
+        h6{
+            @include h6;
+            text-align: center;
+            
+            font-style: italic;
+            margin: 10px 0;
+            flex-basis: inherit;
+        }
+    }
+
+    &--datos{
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+
+        h6{
+            margin: 0 20px;
+            flex-basis: auto;
+        }
+    }   
+}

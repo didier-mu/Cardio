@@ -1,0 +1,63 @@
+.home{
+    h2{
+        @include h2;
+    }
+    
+    h3{
+        @include h3;
+    }
+    
+    p{
+        @include h4;
+    }
+    
+    .combo {
+        @include combo;
+    }
+     
+    .checkboxes{
+        @include checkbox;
+    }
+    
+    input[type=button]{
+        @include boton-on;
+    }
+    
+    
+    .modal{
+        z-index: 9999;
+    
+        .closeModal{
+            display: flex;
+            align-self: flex-end;
+            margin: 20px;
+    
+            img{
+                width: 100%;
+                max-width: 20px;
+            }
+        }
+    
+        a{
+            text-decoration: underline;
+            color: inherit;
+        }
+    
+        .s1, .s2, .s3, .s4, .s5 {
+            background: none;
+            margin-top: auto;
+            padding: 0;
+            position: relative;
+            overflow: hidden;
+        }
+    
+        p{
+            text-align: left;
+        }
+    }
+    
+    .modal-backdrop.show{
+        z-index: 9998;
+    }
+}
+

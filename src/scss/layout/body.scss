@@ -1,0 +1,17 @@
+// **** \\ STYLES_CSS // **** // 
+
+
+body {
+    // background: $grisClaro;
+    overflow-x: hidden !important;
+    position: relative;
+    font-family: $font-primaria;
+    
+    
+    @import "header";
+    @import "footer";
+    @import "pages/stylesGenerals";
+    @import "pages/_home";
+
+    
+}
