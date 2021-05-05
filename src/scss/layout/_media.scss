@@ -144,6 +144,8 @@ body {
             }
 
             &--logos{
+                flex-direction: row;
+                
                 .owl-carousel{
                     display: flex;
                     flex-wrap: wrap;

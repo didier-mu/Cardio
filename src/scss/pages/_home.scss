@@ -69,6 +69,8 @@
             }
             
             .comboBox{
+                margin-bottom: 30px;
+                
                 .msjError{
                     color: red;
                     @include h5;

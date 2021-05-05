@@ -34,27 +34,6 @@ function validacionSesion2(nameCheck){
 }
 
 
-$(".checkmark, .check label").on("click", function () {
-    console.log($(this).siblings('input').prop("checked"));
-    
-    if($(this).siblings('input').prop("checked") == false){
-        $(this).siblings('.msjError').hide().removeClass("show");
-        //$(this).siblings('input').attr("checked","checked");
-        $(this).siblings('input').prop("checked");
-    }
-    
-    else {
-         $(this).siblings('input').removeAttr("checked");
-         $(this).siblings('.msjError').addClass("show");
-    }
-});
-
-$("#selectEdo").on("change", function () {
-    $("#linkBoton").attr({ "href": $(this).val(), "target": "_blank" });
-    $(".comboBox .msjError").hide().removeClass("show");
-});
-
-
 $(document).ready(function () {
 
     // FORMULARIO
@@ -91,6 +70,25 @@ $(document).ready(function () {
         
     });
     
+    $(".checkmark, .check label").on("click", function () {
+        //console.log($(this).siblings('input').prop("checked"));
+        
+        if($(this).siblings('input').prop("checked") == false){
+            $(this).siblings('.msjError').hide().removeClass("show");
+            //$(this).siblings('input').attr("checked","checked");
+            $(this).siblings('input').prop("checked");
+        }
+        
+        else {
+             $(this).siblings('input').removeAttr("checked");
+             $(this).siblings('.msjError').addClass("show");
+        }
+    });
+    
+    $("#selectEdo").on("change", function () {
+        $("#linkBoton").attr({ "href": $(this).val(), "target": "_blank" });
+        $(".comboBox .msjError").hide().removeClass("show");
+    });
     
    
     
