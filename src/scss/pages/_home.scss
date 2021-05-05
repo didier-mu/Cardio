@@ -105,4 +105,14 @@
             }
         }
     }
+    
+    &--legales{
+        padding: 60px 0;
+        
+        p{
+            strong{
+                color: $colorPrimario;
+            }
+        }
+    }
 }

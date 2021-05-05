@@ -685,6 +685,14 @@ body .home--referencias ul li a {
   text-decoration: underline;
 }
 
+body .home--legales {
+  padding: 60px 0;
+}
+
+body .home--legales p strong {
+  color: #e873a4;
+}
+
 @media (min-width:992px) {
   body .header--logo {
     background-size: 80%;
