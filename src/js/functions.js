@@ -56,13 +56,15 @@ $(document).ready(function () {
             //dataLayer.push({ 
             //    'event': data
             //});
-            //console.log("hecho");
+            console.log("hecho");
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({'event': 'buscarData'});
             return true;
             
         }
         
         else{
-            //console.log("no hecho");
+            console.log("no hecho");
             return false;
         }
         
