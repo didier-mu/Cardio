@@ -57,8 +57,11 @@ $(document).ready(function () {
             //    'event': data
             //});
             console.log("hecho");
+            // window.dataLayer = window.dataLayer || [];
+            // window.dataLayer.push({'event': 'buscarData'});
+            console.log(selectedOption);
             window.dataLayer = window.dataLayer || [];
-            window.dataLayer.push({'event': 'buscarData'});
+            window.dataLayer.push({'event': selectedOption});
             return true;
             
         }
@@ -90,27 +93,28 @@ $(document).ready(function () {
     $("#selectEdo").on("change", function () {
         $("#linkBoton").attr({ "href": $(this).val(), "target": "_blank" });
         $(".comboBox .msjError").hide().removeClass("show");
+        // console.log(selectedOption);
     });
     
    
     
     /// COMBO DATA LAYER
     
-    //(function() {
-    //    var selectMenu = document.querySelector('#selectEdo');
-    //    var callback = function(e) {
-    //    var selectedOption = selectMenu.options[selectMenu.selectedIndex].id;
-    //
-    //      window.dataLayer.push({
-    //        event: selectedOption,
-    //        // selectedElement: selectedOption
-    //      });
-    //
-    //    };
-    //
-    //    selectMenu.addEventListener('change', callback, true);
-    //
-    //})();
+    (function() {
+       var selectMenu = document.querySelector('#selectEdo');
+       var callback = function(e) {
+       window.selectedOption = selectMenu.options[selectMenu.selectedIndex].id;
+       
+        //  window.dataLayer.push({
+        //    event: selectedOption,
+        //    // selectedElement: selectedOption
+        //  });
+    
+       };
+    
+       selectMenu.addEventListener('change', callback, true);
+    
+    })();
 
 
 });
